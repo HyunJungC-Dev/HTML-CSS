@@ -50,14 +50,34 @@ body {
 }
 .main {
   background-color: blue;
-  height: 60vh;
-  display: flex;
+  padding: 30px 15px;
+  /* float: left; */
+  display: flow-root;
+  /* overflow: hidden; */
+  /* height: 300px; */
+  /* height: 60vh; */
+  /* display: flex;
   padding: 30px;
-  justify-content: space-between;
+  justify-content: space-between; */
+}
+/* .main::after {
+  content: "";
+  display: block;
+  clear: both;
+} */
+/* .clearfix {
+  clear: both;
+} */
+.group {
+  height: 60vh;
+  float: left;
+  margin: 0 15px;
 }
 .group1 {
   background-color: pink;
   width: 250px;
+  float: right;
+  /* opacity: 0.5; */
 }
 .group2 {
   background-color: skyblue;
