@@ -1,4 +1,5 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 /* body * {
   box-sizing: border-box;
@@ -11,6 +12,23 @@ body *::after {
 /* [class] {
   box-sizing: border-box;
 } */
+/* 숨김 콘텐츠*/
+.ally-hidden {
+  background-color: yellow;
+  position: absolute;
+  /* top: -10000px; */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  visibility: hidden;
+  clip: rect(0 0 0 0); /*옛날*/
+  /*마스킹*/
+  clip: rect(0, 0, 0, 0);
+  /* clip-path: polygon(0 0, 0 0, 0 0); */
+  clip-path: inset(50%);
+}
+
 /* 스타일 초기화*/
 /*링크 스타일*/
 a {
@@ -52,7 +70,7 @@ body {
   background-color: #fff;
   position: relative;
   border-radius: 0 0 15px 15px;
-  padding: 0 30px 50px;
+  padding: 0 30px;
   /* width: 940px; */
   /* border: 10px solid red;
   padding: 50px; */
@@ -65,8 +83,9 @@ body {
   /* background-color: yellow; */
   margin-top: 0;
   margin-bottom: 0;
-  top: 35px;
-  left: 30px;
+  top: 45px;
+  left: 65px;
+  z-index: 10;
 }
 
 /*안내링크*/
@@ -77,7 +96,7 @@ body {
   text-align: right;
   padding-top: 2px;
   padding-bottom: 2px;
-  position: relative;
+
   left: 10px;
   /* padding-top: 10px;
   padding-bottom: 10px; */
@@ -95,6 +114,61 @@ body {
 /* .member li:last-child a {
   padding-right: 0;
 } */
+.navigation {
+  padding-bottom: 40px;
+}
+.menu {
+  background-color: orange;
+  background-image: linear-gradient(
+    to bottom,
+    orangered 0%,
+    orange 45%,
+    orange 60%,
+    orangered 100%
+  );
+  padding-left: 225px;
+  margin: 5px 0 0 0;
+  list-style: none;
+  box-shadow: 0 -2px 0 0 #181818;
+  /* border-top: 2px solid #181818; */
+  border-radius: 0 0 5px 5px;
+  height: 45px;
+  position: relative;
+}
+.sub-menu {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  display: none;
+  top: 47px;
+  white-space: nowrap; /*강제 개행금지*/
+  /* left: 0; */
+  /* display: none; 임시 */
+}
+
+.sub-menu1 {
+}
+.sub-menu1,
+.sub-menu2,
+.sub-menu3 {
+  display: block;
+  left: 0;
+}
+
+.sub-menu4,
+.sub-menu5,
+.sub-menu6 {
+  display: block;
+  right: 0; /*left: 0같이 쓰면 안됨.*/
+}
+.sub-menu li,
+.sub-menu a {
+  display: inline-block;
+}
+.sub-menu a {
+  background-color: yellow;
+}
 .visual {
   background-color: limegreen;
   height: 10vh;
@@ -119,6 +193,37 @@ body {
 /* .clearfix {
   clear: both;
 } */
+
+.menu-item {
+  float: left;
+  border-left: 2px solid #fff;
+  position: relative;
+}
+.menu-button {
+  display: block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0 20px;
+  line-height: 45px;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+.menu-act .menu-button {
+  color: #ff0;
+}
+.menu-act .menu-button::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #181818;
+  /* height: 1px;
+  background: linear-gradient(to right, green, red); */
+}
+/* .menu li{
+이러면 안 됨
+} */
+.menu :focus {
+  outline: 0;
+}
 .group {
   height: 60vh;
   float: left;
