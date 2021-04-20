@@ -1,0 +1,80 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(./normalize.css);
+/* body * {
+  box-sizing: border-box;
+} */
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+/* [class] {
+  box-sizing: border-box;
+} */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Spoqa Han Sans", "sans-serif";
+  font-weight: 400;
+  background-color: #fff;
+  color: #181818;
+  font-size: 1.4rem; /*14px*/
+}
+
+/* 레이아웃 */
+.container {
+  background-color: silver;
+}
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
+  margin: 0 auto;
+}
+.header {
+  background-color: yellow;
+  height: 10vh;
+  /* width: 940px; */
+  /* border: 10px solid red;
+  padding: 50px; */
+  /* margin: 0 auto; width 가 있어야쓸 수 있다. auto margin trick */
+}
+.visual {
+  background-color: limegreen;
+  height: 10vh;
+}
+.main {
+  background-color: blue;
+  height: 60vh;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+.group1 {
+  background-color: pink;
+  width: 250px;
+}
+.group2 {
+  background-color: skyblue;
+  width: 380px;
+}
+.group3 {
+  background-color: orange;
+  width: 190px;
+}
+.slogan {
+  background: purple;
+  height: 10vh;
+}
+.footer {
+  background-color: tomato;
+}
+.footer-inner {
+  background-color: gray;
+  height: 10vh;
+}
