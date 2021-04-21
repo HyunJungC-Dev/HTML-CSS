@@ -2,7 +2,8 @@
 @import url(./fontello.css);
 @import url(./normalize.css);
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -248,30 +249,115 @@ body *::after {
   animation-fill-mode: forwards;
 }
 
+/* 메인 콘텐츠*/
 .main {
-  background-color: blue;
-  height: 60vh;
+  background-color: #fff;
   padding: 30px;
   display: flow-root;
   padding: 30px 15px;
+  min-height: 450px;
+  border-radius: 15px 15px 0 0;
 }
 .group {
-  height: 60vh;
   float: left;
   margin: 0 15px;
 }
 .group1 {
-  background-color: pink;
   width: 250px;
-  float: right;
 }
 .group2 {
-  background-color: skyblue;
   width: 380px;
 }
 .group3 {
-  background-color: orange;
   width: 190px;
+}
+/* 로그인 폼 */
+.login {
+  border-radius: 5px;
+  padding: 15px 10px 10px;
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: #e29c2b radial-gradient(circle at right top, #e29c2b, #e25a2d);
+}
+.login-heading {
+  margin: 0;
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-indent: 10px;
+}
+.login-form {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+.login-form fieldset {
+  border: 0 none;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+.login-form label {
+  font-size: 1.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  cursor: pointer;
+}
+.login-form input {
+  border: 1px solid #ccc;
+  padding: 2px 2px 2px 5px;
+  width: 95px;
+  font-size: 1.2rem;
+}
+.user-pwd {
+  margin-top: 5px;
+}
+.btn-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 44px;
+  padding: 2px 5px;
+  border: 0;
+  background: #e25a2d;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 3px;
+}
+.sign {
+  background-color: #fff;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.sign a {
+  font-size: 1.2rem;
+}
+.sign .icon-right-open {
+  color: #e25a2d;
+}
+/* 유효성 배너 검사*/
+.validation-list {
+  margin: 25px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.validation-list a {
+  display: block;
+  border: 1px solid #aaa;
+  margin-top: 10px; /* 마진 병합 */
+  border-radius: 25px;
+  padding: 7px 10px 5px 45px;
+  background: url(./images/validation_icon.png) no-repeat 20px 50%,
+    #ccc linear-gradient(180deg, #ccc, #eee);
 }
 .slogan {
   background-color: purple;

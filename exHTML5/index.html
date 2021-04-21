@@ -173,7 +173,73 @@
         <p class="visual-text">Web Standards &amp; Accessibility</p>
       </div>
       <main class="main">
-        <div class="group group1">group1</div>
+        <div class="group group1">
+          <section class="login">
+            <h2 class="login-heading">로그인</h2>
+            <form
+              action="https://formspree.io/seulbinim@gmail.com"
+              method="POST"
+              class="login-form"
+            >
+              <fieldset>
+                <legend>로그인 폼</legend>
+                <div class="user-email">
+                  <label for="userEmail">아이디</label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="이메일 주소"
+                    id="userEmail"
+                    name="userEmail"
+                  />
+                </div>
+                <div class="user-pwd">
+                  <label for="userPwd">비밀번호</label>
+                  <input
+                    type="password"
+                    required
+                    placeholder="8자리 이상"
+                    id="userPwd"
+                    name="userPwd"
+                  />
+                </div>
+                <button class="btn-login" type="submit">로그인</button>
+              </fieldset>
+              <ul class="sign">
+                <li>
+                  <a href="#"><span class="icon-right-open"></span>회원가입</a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><span class="icon-right-open"></span>아이디/비밀번호
+                    찾기</a
+                  >
+                </li>
+              </ul>
+            </form>
+          </section>
+          <h2 class="a11y-hidden">유효성 검사 배너</h2>
+          <ul class="validation-list">
+            <li>
+              <a
+                href="https://validator.w3.org/"
+                target="_blank"
+                title="마크업 유효성 검사 사이트로 이동(새창)"
+              >
+                W3C Markup Validation
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://jigsaw.w3.org/css-validator/"
+                target="_blank"
+                title="CSS 유효성 검사 사이트로 이동(새창)"
+              >
+                CSS Validation Service
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="group group2">group2</div>
         <div class="group group3">group3</div>
       </main>
