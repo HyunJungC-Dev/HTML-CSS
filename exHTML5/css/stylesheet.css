@@ -10,3 +10,61 @@ body {
   color: #181818;
   font-size: 1.4rem;
 }
+
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* 레이아웃 */
+.container {
+  background-color: silver;
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: 940px;
+  margin: 0 auto;
+}
+.header {
+  background-color: yellow;
+  height: 10vh;
+}
+.visual {
+  background-color: lime;
+  height: 10vh;
+}
+.main {
+  background-color: blue;
+  height: 60vh;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.group1 {
+  background-color: pink;
+  width: 250px;
+}
+.group2 {
+  background-color: skyblue;
+  width: 380px;
+}
+.group3 {
+  background-color: orange;
+  width: 190px;
+}
+.slogan {
+  background-color: purple;
+  height: 10vh;
+}
+.footer {
+  background-color: tomato;
+}
+.footer-inner {
+  background-color: gray;
+  height: 10vh;
+}
