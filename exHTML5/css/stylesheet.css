@@ -170,10 +170,40 @@ body *::after {
 .sub-menu a {
   padding: 10px 10px 10px 0;
 }
+/* 비주얼 */
+@keyframes textAni {
+  0% {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0);
+    /* margin: 0; */
+    /* padding: 0; box */
+    top: 0;
+    left: 0;
+  }
+  100% {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    /* margin: 075px 0 0 400px; */
+    /* padding: 075px 0 0 400px; */
+    top: 75px;
+    left: 400px;
+  }
+}
 .visual {
   background-color: lime;
-  height: 10vh;
+  height: 120px; /* 광고 같이 규격이 정해져있는 건 높이를 설정*/
+  position: relative;
 }
+.visual-text {
+  position: absolute;
+  font-family: Georgia, "Times New Roman", Times, serif; /* local font - 운영체제마다 다를 수 있다*/
+  background-color: yellow;
+  margin: 0;
+  animation-name: textAni;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
 .main {
   background-color: blue;
   height: 60vh;
