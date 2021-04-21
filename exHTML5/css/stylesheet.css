@@ -39,7 +39,11 @@ body *::after {
 
 /* 레이아웃 */
 .container {
-  background-color: silver;
+  background-color: #ccc;
+  background-image: url(./images/bg_flower.png),
+    linear-gradient(180deg, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 
 .header,
@@ -200,7 +204,6 @@ body *::after {
   }
 }
 .visual {
-  background-color: lime;
   height: 120px; /* 광고 같이 규격이 정해져있는 건 높이를 설정*/
   position: relative;
 }
@@ -239,7 +242,6 @@ body *::after {
   display: inline-block;
   /* position: absolute; */
   font-family: Georgia, "Times New Roman", Times, serif; /* local font - 운영체제마다 다를 수 있다*/
-  background-color: yellow;
   margin: 0;
   animation-name: textAni;
   animation-duration: 3s;
