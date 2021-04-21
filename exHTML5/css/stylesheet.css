@@ -30,9 +30,30 @@ body *::after {
   width: 940px;
   margin: 0 auto;
 }
+/* 헤더 */
 .header {
+  background-color: #fff;
+  position: relative;
+}
+/* 로고 */
+.logo {
+  position: absolute;
   background-color: yellow;
-  height: 10vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: 45px;
+  left: 65px;
+}
+.logo a {
+  display: block;
+  background-color: pink;
+}
+.logo img {
+  vertical-align: middle;
+}
+/* 안내링크 */
+.member {
+  margin: 0;
 }
 .visual {
   background-color: lime;
