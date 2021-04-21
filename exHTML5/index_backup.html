@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--IE열 때 edge면 최신 버전으로 랜더링하라는 뜻, IE=8이면 8로 랜더링으로 한다.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/stylesheet.css" />
+    <!--viewporet 크기대로 랜더링 하라. 반응형으로 개발할 때 반드시 viewport를 해야한다.-->
+    <!--모든 페이지의 title은 달라야한다. 검색했을 때 키워드가 걸리게끔 유니크한 정보를 넣어야한다. 불필요한 장식문자 사용도 배제해야.-->
+    <title>웹카페 - HTML5,CSS3</title>
+    <!--,공백에서 공백없는 게 더 좋다.-->
+    <!--title:html 이라고 검색하면 title에 html 들어가는 것만 찾는다. title은 이렇게 검색에도 사용되었기도 했으로 유의미한 정보를 넣어야-->
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <!--h1.logo>a>img-->
+        <h1 class="logo">
+          <a href="#"><img src="./images/logo.png" alt="Web Cafe" /></a>
+        </h1>
+        <!--ul.member>li*5>span[aria-hidden="true"]{:}+a[href="#"]-->
+        <ul class="member">
+          <li><a href="#">홈</a></li>
+          <li><span aria-hidden="true">|</span><a href="#">로그인</a></li>
+          <li><span aria-hidden="true">|</span><a href="#">회원가입</a></li>
+          <li><span aria-hidden="true">|</span><a href="#">사이트맵</a></li>
+          <li><span aria-hidden="true">|</span><a href="#">english</a></li>
+        </ul>
+        <nav class="navigation">
+          <h2 class="ally-hidden">메인 메뉴</h2>
+          <ul class="menu">
+            <li class="menu-item menu-act">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >HTML에 대해</a
+              >
+              <ul class="sub-menu sub-menu1">
+                <li>
+                  <a href="#" class="icon-dot-circled">HTML5 소개</a>
+                </li>
+                <li>
+                  <a href="#" class="icon-dot-circled">레퍼런스 소개</a>
+                </li>
+                <li>
+                  <a href="#" class="icon-dot-circled">활용예제</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >CSS에 대해</a
+              >
+              <ul class="sub-menu sub-menu2">
+                <li>
+                  <a href="#">CSS 소개</a>
+                </li>
+                <li>
+                  <a href="#">CSS2 VS CSS3</a>
+                </li>
+                <li>
+                  <a href="#">CSS 애니메이션</a>
+                </li>
+                <li>
+                  <a href="#">CSS Framework</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >웹표준</a
+              >
+              <ul class="sub-menu sub-menu3">
+                <li>
+                  <a href="#">웹표준 이란?</a>
+                </li>
+                <li>
+                  <a href="#">W3C</a>
+                </li>
+                <li>
+                  <a href="#">HTML5의 현재와 미래</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >웹 접근성</a
+              >
+              <ul class="sub-menu sub-menu4">
+                <li>
+                  <a href="#">웹 접근성의 개요</a>
+                </li>
+                <li>
+                  <a href="#">장애 환경의 이해</a>
+                </li>
+                <li>
+                  <a href="#">장차법</a>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 품질마크</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >묻고 답하기</a
+              >
+              <ul class="sub-menu sub-menu5">
+                <li>
+                  <a href="#">묻고 답하기</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+                <li>
+                  <a href="#">1대1 질문</a>
+                </li>
+                <li>
+                  <a href="#">웹표준</a>
+                </li>
+                <li>
+                  <a href="#">웹 접근성</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a
+                href="#"
+                class="menu-button"
+                role="button"
+                aria-pressed="false"
+                aria-haspopup="true"
+                >자료실</a
+              >
+              <ul class="sub-menu sub-menu6">
+                <li>
+                  <a href="#">공개 자료실</a>
+                </li>
+                <li>
+                  <a href="#">이미지 자료실</a>
+                </li>
+                <li>
+                  <a href="#">웹표준 자료실</a>
+                </li>
+                <li>
+                  <a href="#">웹 접근성 자료실</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="visual">visual</div>
+      <main class="main">
+        <!--div.group.group$*3{group$}-->
+        <div class="group group1">group1</div>
+        <div class="group group2">group2</div>
+        <div class="group group3">group3</div>
+        <!-- <div class="clearfix"></div> -->
+      </main>
+      <article class="slogan">slogan</article>
+      <footer class="footer">
+        <div class="footer-inner">footer</div>
+      </footer>
+    </div>
+  </body>
+</html>
