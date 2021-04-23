@@ -216,23 +216,18 @@ body *::after {
   height: 100%;
   top: 0;
   left: 0;
-  /* animation-name: flowerAni;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
-  animation: flowerAni 2s infinite alternate 1s;
+  background-repeat: no-repeat;
+  animation: flowerAni 2s infinite alternate 3s;
 }
 .visual::before {
   background-image: url(./images/ani_flower_01.png),
     url(./images/ani_flower_02.png);
-  background-repeat: no-repeat;
   background-position: 0 -10px, 670px 0;
   /* background: ; */
 }
 .visual::after {
   background-image: url(./images/ani_flower_03.png),
     url(./images/ani_flower_04.png);
-  background-repeat: no-repeat;
   background-position: 300px 10px, 800px 5px;
   animation-delay: 1s;
 }
@@ -359,6 +354,133 @@ body *::after {
   background: url(./images/validation_icon.png) no-repeat 20px 50%,
     #ccc linear-gradient(180deg, #ccc, #eee);
 }
+/* 웹 관련 용어 */
+.term {
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px 15px 10px;
+  display: flow-root;
+  /* border-top: 1px solid transparent; section의 마진과 term 마진 */
+}
+.term-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+.term-list {
+  margin: 10px 0 0 0;
+}
+
+.term-list-subject {
+  float: right;
+  width: 145px;
+  color: #296897;
+}
+.term-list-thumbnail {
+  margin-left: 0;
+  float: left;
+}
+.term-list-thumbnail img {
+  display: block; /*여백제거*/
+}
+.term-list-brief {
+  margin-left: 0;
+  /* padding-left: 76px; */
+  float: right;
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.term-list > :nth-child(6n + 4),
+.term-list > :nth-child(6n + 6) {
+  float: left;
+}
+.term-list > :nth-child(6n + 5) {
+  float: right;
+}
+
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(180deg, #ccc, #fff);
+  border: 1px solid #aaa;
+  border-bottom-color: #fff; /* gradient가 흰색으로 끝나서*/
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+.search-form-container {
+  display: flex;
+  justify-content: space-between;
+}
+.search-form fieldset {
+  border: 0;
+  padding: 0;
+}
+.search-form label {
+  cursor: pointer;
+}
+[name="search"] {
+  width: 200px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 2px 2px 2px 5px;
+  margin-left: 5px;
+}
+.btn-search {
+  background-color: #222;
+  color: #fff;
+  border: 0;
+  padding: 0 10px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+
+/*공지사항 및 자료실 */
+.board {
+  background-color: yellow;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.notice,
+.pds {
+  background-color: pink;
+  /* overflow: hidden; */
+}
+.notice-more,
+.pds-more {
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tab {
+  float: left;
+}
+
+.notice-list,
+.pds-list {
+  /* background-color: skyblue; */
+  position: absolute;
+  top: 45px;
+  left: 0;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.notice-more,
+.pds-more {
+  background-color: orange;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .slogan {
   background-color: purple;
   height: 10vh;
