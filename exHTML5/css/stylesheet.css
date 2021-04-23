@@ -440,32 +440,69 @@ body *::after {
 
 /*공지사항 및 자료실 */
 .board {
-  background-color: yellow;
   margin-top: 20px;
   position: relative;
-  overflow: hidden;
+  padding-top: 40px;
+  min-height: 170px;
 }
-.notice,
-.pds {
-  background-color: pink;
-  /* overflow: hidden; */
-}
+.notice-list,
+.pds-list,
 .notice-more,
 .pds-more {
-  background-color: orange;
+  display: none;
+}
+
+.tab-act .notice-list,
+.tab-act .pds-list,
+.tab-act .notice-more,
+.tab-act .pds-more {
+  display: block;
+}
+
+.tab {
+  position: absolute;
+  top: 0;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+.tab a {
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  color: #999;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);
+  padding: 8px 15px 7px;
+}
+
+.notice-more,
+.pds-more {
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .tab {
-  float: left;
+  position: absolute;
+  top: 0;
+}
+
+.tab-act .tab a {
+  color: #e25a2d;
+  background: #fff;
+  border-color: #e25a2d #e25a2d #fff #e25a2d;
+}
+
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 83px;
 }
 
 .notice-list,
 .pds-list {
   /* background-color: skyblue; */
-  position: absolute;
   top: 45px;
   left: 0;
   margin: 0;
@@ -473,14 +510,32 @@ body *::after {
   list-style: none;
 }
 
-.notice-more,
-.pds-more {
-  background-color: orange;
-  position: absolute;
-  top: 0;
-  right: 0;
+.notice-list li,
+.pds-list li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
 }
 
+.notice-list a,
+.pds-list a {
+  flex: 1 1 0; /* grow shrink basis*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.notice-more,
+.pds-more {
+  position: absolute;
+  padding: 8px;
+  right: -8px;
+  top: 0px;
+}
+
+.icon-plus {
+  color: hsla(110, 50%, 30%, 1);
+}
 .slogan {
   background-color: purple;
   height: 10vh;
