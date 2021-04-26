@@ -763,14 +763,92 @@ body *::after {
 .down {
   background-position: 0 100%;
 }
+/*슬로건*/
 .slogan {
-  background-color: purple;
-  height: 10vh;
+  padding: 10px 70px 10px 150px;
+  position: relative;
+}
+.slogan-heading {
+  width: 110px;
+  height: 83px;
+  margin: 0;
+  position: absolute;
+  left: 25px;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slogan-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./images/coffee.png) no-repeat 0 0;
+}
+.slogan-content {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #988574;
+}
+
+.slogan-content q::before {
+  font-size: 4.5rem;
+  position: relative;
+  top: 20px;
+}
+.slogan-content q::after {
+  content: "";
 }
 .footer {
-  background-color: tomato;
+  background: #ccc
+    linear-gradient(180deg, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
 }
 .footer-inner {
-  background-color: gray;
-  height: 10vh;
+  padding: 15px 100px 15px 150px;
+  position: relative;
+}
+.footer-logo {
+  position: absolute;
+  top: 45px;
+  left: 25px;
+}
+.badge {
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  background: #7b8385;
+  color: #fff;
+  padding: 4px;
+}
+.address {
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.guide-list a {
+  display: block;
+  padding: 7px 15px;
+  text-transform: uppercase;
+}
+
+.address span:nth-child(-n + 2) {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  display: block;
+  margin-top: 7px;
 }
