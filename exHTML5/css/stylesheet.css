@@ -633,7 +633,8 @@ body *::after {
 }
 
 .event-heading,
-.related-heading {
+.related-heading,
+.favorite-heading {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
@@ -710,6 +711,58 @@ body *::after {
   padding: 2px;
 }
 
+/* 인기사이트 */
+.favorite {
+  margin-top: 20px;
+  position: relative;
+}
+.favorite-more {
+  position: absolute;
+  padding: 8px;
+  top: 4px;
+  right: 2px;
+}
+
+.favorite-list {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  /* counter-reset: number; */
+}
+
+.favorite-list li {
+  counter-increment: number;
+  margin-top: 5px;
+  position: relative;
+}
+
+.favorite-list li::before {
+  display: inline-block;
+  content: counter(number);
+  color: #fff;
+  background-color: #aaa;
+  padding: 2px 5px;
+  font-size: 1.2rem;
+  border-radius: 2px;
+}
+
+.up,
+.stop,
+.down {
+  width: 9px;
+  height: 11px;
+  background: url(./images/rank.png);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+}
+.stop {
+  background-position: 0 50%;
+}
+.down {
+  background-position: 0 100%;
+}
 .slogan {
   background-color: purple;
   height: 10vh;
