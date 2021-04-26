@@ -619,7 +619,7 @@ body *::after {
   background: #ccc linear-gradient(180deg, #ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
-  padding: 10px;
+  padding: 12px 10px;
 }
 
 .accent-color {
@@ -632,7 +632,8 @@ body *::after {
   border-bottom: 1px solid #aaa;
 }
 
-.event-heading {
+.event-heading,
+.related-heading {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
@@ -654,6 +655,7 @@ body *::after {
   overflow: hidden;
   padding: 0;
   background: url(./images/back_forward.png) no-repeat 0 0;
+  cursor: pointer;
 }
 
 .event em {
@@ -667,6 +669,47 @@ body *::after {
 .event-thumbnail img {
   box-shadow: 5px 5px 0 0 #aaa;
 }
+
+/**/
+.related {
+  padding-top: 12px;
+}
+
+.related-list {
+  background-color: #fff;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  height: 25px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  transition: all 1s;
+  /* transition-property: height, padding, background-color;
+  transition-duration: 0.5s, 0.2s, 0.5s;
+  transition-delay: 0, 0.5s, 0.7s; */
+  /* transition: height 0.5s 0s, padding 0.2s 0.5s, background-color 0.5s 0.7s*/
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 145px;
+  padding: 10px 0;
+  /* background-color: pink; */
+}
+
+.related-list a {
+  display: block;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 20px;
+  /* padding: 4px 0; */
+}
+
+.related-list li {
+  padding: 2px;
+}
+
 .slogan {
   background-color: purple;
   height: 10vh;
